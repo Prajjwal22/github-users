@@ -21,7 +21,7 @@ const Home = () => {
   const fetchUsers = (query: string) => {
     setTimeout(async () => {
       try {
-        const token = "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";
+        const token = process.env.GITHUB_TOKEN;
         setIsLoading(true);
         const response = await fetch(
           `https://api.github.com/search/users?q=${query}`,
