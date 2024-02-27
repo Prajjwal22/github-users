@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ChangeEventHandler, useState } from "react";
 
 type User = {
   id: number;
@@ -21,7 +21,7 @@ const Home = () => {
   const fetchUsers = (query: string) => {
     setTimeout(async () => {
       try {
-        const token = "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";
+        const token = "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";
         setIsLoading(true);
         const response = await fetch(
           `https://api.github.com/search/users?q=${query}`,
